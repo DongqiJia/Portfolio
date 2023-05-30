@@ -1,0 +1,36 @@
+//* This mixin is for the button styling like the one in the navigation bar
+@mixin Btn__With--border(){
+    @include displayPosition($align-i: center);
+    margin: 0rem 1rem;
+    background-color: $White;
+    border: solid 4px $LightBlue;
+    border-radius: 5rem;
+    padding: 0.5rem 0.5rem;
+    // &.class {
+
+    // }
+    a{
+        padding: 0rem 0rem 0rem 0.5rem;
+        @include TextStyling($family: $open-sans, $size: 20px, $weight: 400, $color: $DarkBlue);
+    }
+    ion-icon{
+        padding:0rem 0.5rem;
+        @include IconStyling($size:24px, $color: $DarkBlue); 
+    }
+}
+
+//* This mixin is for the button styling like the one on the course page
+@mixin Btn__Without--border(){
+    @include displayPosition($align-i: center);
+    padding: 0.5rem 0.5rem;
+    border: none;
+    background-color: $White;
+    a{
+        @include TextStyling($family: $oswald, $size: 20px, $weight: 400, $color: $LightBlue);
+        letter-spacing: 2px;
+    }
+    ion-icon{
+        padding:0.2rem 0.5rem 0rem 0.5rem;
+        @include IconStyling($size:20px, $color: $LightBlue); 
+    }
+}

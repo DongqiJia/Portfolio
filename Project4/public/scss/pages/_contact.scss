@@ -1,0 +1,177 @@
+@import'../components/buttons';
+
+section.contact_landing {
+    @include displayPosition($direction: row, $j-content: center);
+    height: 40rem;
+    width: 100%;
+    @media screen and (max-width: 1600px) {
+        height: 45rem;
+    }
+    div.intro{
+        @include displayPosition($direction: row,$j-content: space-evenly, $align-i: center);
+        width: 70%;
+            @media screen and (max-width: 1600px) {
+                @include displayPosition($direction: column, $j-content: space-evenly, $align-i: center);
+            }  
+        div {
+            div.circle-1{
+                @include CircleStyling($color: $DarkBlue, $size: 260px, $top: 35%, $left: 60%);
+                @media screen and (max-width: 1600px) {
+                    @include CircleStyling($color: $DarkBlue, $size: 260px, $top: 40%, $left: 60%);
+                }
+            }
+            div.circle-2{
+                @include CircleStyling($color: $LightBlue, $size: 380px, $top: 60%, $left: 34%);
+                @media screen and (max-width: 1600px) {
+                    @include CircleStyling($color: $LightBlue, $size: 380, $top: 70%, $left: 34%);
+                }
+            }
+        } 
+        div {
+            img{
+                position: relative;
+                width: 520px;
+                height: 520px;
+                border-radius: 50rem;
+                object-fit: cover;
+                @media screen and (max-width: 1600px) {
+                    @include CircleStyling($color: $LightBlue, $size: 520px, $top: 60%, $left: 50%);
+                }
+            }
+        }  
+    }
+}
+
+    
+section.cards_section {
+    div.cards {
+        @include displayPosition($direction: row, $j-content: space-evenly, $align-i: baseline);
+        div.title {
+            @include displayPosition($direction: row, $j-content: space-evenly, $align-i: center);
+            ion-icon {
+                color: #62E3FF;
+                font-size: 64px;
+                padding-bottom: .5rem;
+            }
+            h2 {
+                @include TextStyling($family: $oswald, $size: 36px, $weight: 700, $color: $DarkBlue);
+                padding-bottom: .5rem;
+            }
+        }
+        div.card-call, div.card-location, div.card-time {
+
+            p {
+                @include TextStyling($family: $open-sans, $size: 16px, $weight: 400, $color: $Black);
+                margin-top: 10px;
+            }
+
+        }
+    }
+}
+
+section.contact_form {
+    @include displayPosition($direction: column, $j-content: center, $align-i: center);
+    z-index: 1;
+    div.form {  
+        width: 50%;
+        padding: 2rem;
+        margin: 5rem 0rem;
+        background-color: rgba(255, 255, 255, 0.788);
+        border-radius: 10px;
+            h1 {
+                @include displayPosition($j-content: center, $align-i: normal);
+                @include TextStyling($family: $oswald, $size: 32px, $weight: 700, $color: $DarkBlue); 
+            }
+        div.inputSection {
+            @include displayPosition($direction: row, $j-content: center, $align-i: normal);
+            div {
+            width: 23.3rem;
+                @include displayPosition($direction: column, $j-content: center, $align-i: normal);
+                margin: 0rem .5rem;
+                padding: 1rem 0rem;
+            }
+        }
+        div.message {
+            @include displayPosition($direction: row, $j-content: center, $align-i: center);
+            padding: 1rem 0rem;
+            height: 50%;
+                textarea {
+                    width: 86%;
+                    max-width: 86%;
+                    min-height: 20vh;
+                    padding: .5rem;
+                    color: black;
+                    background-color: $Silver;
+                    border: none;
+                }
+            }
+        div.submit {
+            @include displayPosition($direction: row, $j-content: center, $align-i: center);
+            margin: .5rem 0rem;
+            input {
+                border: none;
+                background-color: $Silver;
+                width: 86%;
+                padding: .5rem;
+            }
+            :hover {
+                background-color: $LightGrey;
+            }
+        }
+        label {
+            @include TextStyling($family: $oswald, $size: 16px, $weight: 400, $color: black)
+        }
+        input {
+            @include TextStyling($family: $oswald, $size: 16px, $weight: 400, $color: black); 
+            border: none;
+            background-color: $Silver;
+            color: black;
+            padding: .5rem;
+        }  
+    }
+    div.background_contactform {
+        position: absolute;
+        top: 10%;
+        left: 30%;
+        z-index: -1;
+        div.circles {
+            div.circle-1 {
+                @include CircleStyling($color: #84c3c39f, $size: 360px, $top: 70rem, $left: 55rem);
+                stroke: #2b59608a;
+                box-shadow: inset 0px 4px 67px 0px #00000046;
+            }   
+            div.circle-2 {
+                @include CircleStyling($color: #DAF7FD, $size: 360px, $top: 80rem, $left: 37rem);
+                stroke: #62e2ff86;
+                box-shadow: inset 0px 4px 67px 0px #00000046;
+                z-index: -2;
+            }
+            div.circle-3 {
+                @include CircleStyling($color: #daf7fdb9, $size: 231px, $top: 62rem, $left: 25rem);
+                stroke: #9fe4f354;
+                box-shadow: inset 0px 4px 67px 0px #00000046;
+            }
+            div.circle-4 {
+                @include CircleStyling($color: #62e2ff5e, $size: 140px, $top: 60rem, $left: 10rem);
+                stroke: #4ca4a456;
+                box-shadow: inset 0px 4px 67px 0px #00000046;
+            }
+            div.circle-5 {
+                @include CircleStyling($color: #a3edfeab, $size: 373px, $top: 85rem, $left: 8rem);
+                stroke: #62E3FF;
+                box-shadow: inset 0px 4px 67px 0px #00000046;
+            }
+            div.circle-6 {
+                @include CircleStyling($color: #9fe4f362, $size: 380px, $top: 70.5rem, $left: -1rem);
+                stroke: #DAF7FD;
+                box-shadow: inset 0px 4px 67px 0px #00000046;
+            }
+            div.circle-7 {
+                @include CircleStyling($color: #9be4f444, $size: 129px, $top: 85rem, $left: -13rem);
+                stroke: #62e2ff77;
+                box-shadow: inset 0px 4px 67px 0px #00000046;
+            }
+        }
+    }
+}
+

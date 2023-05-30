@@ -1,0 +1,84 @@
+@import '../abstracts/variables';
+@import '../abstracts/placeholders';
+
+section.login__form{
+    @include displayPosition($direction: column, $j-content: center);
+    height: 50rem;
+    div.container{
+        @include displayPosition($direction: column, $align-i: center);
+        form.form{
+            @extend %form__styling;
+            width: 30rem;
+            div{
+                width: 100%;
+                @include displayPosition($direction: column, $align-i: flex-start);
+                label{
+                    @include TextStyling($family: $oswald, $size: 36px, $weight: 700, $color: $DarkBlue);
+                }
+            }
+            input{
+                @extend %input__styling;
+            }
+            div.submit__btn{
+                width: 100%;
+                margin: 3rem 0rem 0rem 0rem;
+                @include displayPosition($direction: column, $j-content: center, $align-i: center);
+                button{
+                    @extend %form__btn;
+                }
+            }
+        }
+        div.circle-1{
+            @include CircleStyling($color: $LightBlue, $size: 300px, $top: 70%, $left: 67%);
+        }
+        div.circle-2{
+            @include CircleStyling($color: $MaximumBlue, $size: 270px, $top: 83%, $left: 35%);
+        }
+        div.circle-3{
+            @include CircleStyling($color: $DarkBlue, $size: 200px, $top: 85%, $left: 65%);
+        }
+    }
+}
+
+section.register__form{
+    @include displayPosition($direction: column, $j-content: center);
+    height: 50rem;
+    div.container{
+        @include displayPosition($direction: column, $align-i: center);
+        form.form{
+            @extend %form__styling;
+            width: 70rem;
+            div.input__forms{
+                width: 100%;
+                @include displayPosition($direction: row, $j-content: space-evenly, $align-i: center);
+                div{
+                    width: 40%;
+                    @include displayPosition($direction: column, $align-i: flex-start);
+                    label{
+                        @include TextStyling($family: $oswald, $size: 36px, $weight: 700, $color: $DarkBlue);
+                    }
+                }
+                input{
+                    @extend %input__styling;
+                }
+            }
+            div.submit__btn{
+                width: 100%;
+                margin: 3rem 0rem 0rem 0rem;
+                @include displayPosition($direction: column, $j-content: center, $align-i: flex-end);
+                button{
+                    @extend %form__btn;
+                }
+            }
+        }
+        div.circle-1{
+            @include CircleStyling($color: $LightBlue, $size: 300px, $top: 75%, $left: 80%);
+        }
+        div.circle-2{
+            @include CircleStyling($color: $MaximumBlue, $size: 270px, $top: 83%, $left: 18%);
+        }
+        div.circle-3{
+            @include CircleStyling($color: $DarkBlue, $size: 200px, $top: 90%, $left: 80%);
+        }
+    }
+}

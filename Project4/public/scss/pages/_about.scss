@@ -1,0 +1,27 @@
+section.about_landing {
+    @include displayPosition($direction: column, $j-content: normal, $align-i: center);
+    img {
+        border-radius: 200px;
+        margin-bottom: 1rem;
+    }
+    h1 {
+        @include TextStyling($family: $oswald, $size: 48px, $weight: 400, $color: $DarkBlue);
+    }
+    div.grid-container {
+        display: grid;
+        margin: 5rem 13rem;
+        column-gap: 4rem;
+        row-gap: 4rem;
+        grid-template-columns: auto auto;
+        div.grid-item {
+            padding: 1rem;
+            // box-shadow: 1px 1px 5px rgb(179, 179, 179);
+            h4 {
+                @include TextStyling($family: $oswald, $size: 32px, $weight: 400, $color: $LightBlue);
+            }
+            p {
+                @include TextStyling($family: $open-sans, $size: 16px, $weight: 400, $color: $Black);
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+@import '../components/buttons';
+
+// * Styling for the footer
+
+footer{
+    background-color: $DarkGrey;
+    width: 100%;
+    div.footer__top--container{
+        @include displayPosition($direction: row, $j-content: center);
+        div.footer__top{
+            @include displayPosition($direction: row, $j-content: space-between);
+            width: 75%;
+            div{
+                margin-bottom: 4rem;
+                h3{
+                    @include TextStyling($family: $oswald, $size: 24px, $weight: 400, $color: $LightBlue);
+                    padding: 2rem 0rem 2rem 0rem;
+                }
+                ul{
+                    li{
+                        @include displayPosition($direction: row);
+                        ion-icon{
+                            @include IconStyling($size:20px, $color: $Silver);
+                            padding:0rem 1rem 0rem 0rem;
+                            --ionicon-stroke-width: 50px;
+                        }
+                        p{
+                            @include TextStyling($family: $open-sans, $size: 20px, $weight: 400, $color: $Silver);
+                            cursor: pointer;
+                            padding: 0rem 0rem 1rem 0rem;
+                            a{
+                                @include TextStyling($family: $open-sans, $size: 20px, $weight: 400, $color: $Silver);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    div.footer__bottom{
+        @include displayPosition($j-content: center);
+        padding: 1rem;
+        border-top: solid 2px $DavyGrey;
+        p{
+            @include TextStyling($family: $open-sans, $size: 20px, $weight: 400, $color: $Silver);
+        }
+    }
+}

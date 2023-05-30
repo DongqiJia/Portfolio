@@ -1,0 +1,79 @@
+section.workshop__hero{
+    margin: 5rem 0rem 0rem 0rem;
+    @include displayPosition($direction: column, $align-i: center); 
+    img{
+        position: relative;
+        object-fit: cover;
+        width: 700px;
+        height: 700px;
+        border-radius: 50%;
+    }
+    div.circle-1{
+        @include CircleStyling($color: $LightBlue, $size: 480px, $top: 50%, $left: 35%);
+    }
+    div.circle-2{
+        @include CircleStyling($color: $MaximumBlue, $size: 410px, $top: 55%, $left: 67%);
+    }
+    div.circle-3{
+        @include CircleStyling($color: $DarkBlue, $size: 360px, $top: 80%, $left: 35%);
+    }
+}
+
+
+section.workshops{
+    margin: 3rem 0rem 3rem 0rem;
+    @include displayPosition($direction: column, $align-i: center);
+    width:100%;
+    div.event{
+        @include displayPosition($direction: row, $j-content: space-between);
+        width: 70%;
+        margin: 3rem 0rem 3rem 0rem;
+        div.event__info{
+            margin: 0 3rem 0 3rem;
+            width: 50%;
+            @include displayPosition($direction: column, $j-content: space-evenly);
+            h2{
+                @include TextStyling($family: $oswald, $size: 48px, $weight: 700, $color: $DarkBlue);
+            }
+            div.line{
+                background-color: $AmberGrey;
+                height: 1px;
+                width: 40rem;
+            }
+            div.data{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                p{
+                    @include TextStyling($family: $open-sans, $size: 18px, $weight: 400, $color: $AmberGrey);
+                    line-height: 2.5rem;
+                }
+            }
+            p{
+                @include TextStyling($family: $open-sans, $size: 20px, $weight: 400, $color: $Black);
+            }
+        }
+        div.photo__content{
+            @include displayPosition($direction: column, $align-i: center);
+            img{
+                position: relative;
+                object-fit: cover;
+                width: 400px;
+                height: 400px;
+                border-radius: 50%;
+                margin: 2rem 0rem 2rem 0rem;
+            }
+            div.circle-4{
+                @include CircleStyling($color: $LightBlue, $size: 300px, $top: 135%, $left: 65%);
+            }
+            div.circle-5{
+                @include CircleStyling($color: $MaximumBlue, $size: 270px, $top: 205%, $left: 35%);
+            }
+            div.circle-6{
+                @include CircleStyling($color: $DarkBlue, $size: 200px, $top: 235%, $left: 80%);
+            }
+        }
+            button{
+                @include Btn__With--border;
+            }
+        }
+    }

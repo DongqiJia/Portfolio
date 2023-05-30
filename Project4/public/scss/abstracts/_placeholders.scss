@@ -1,0 +1,32 @@
+// * Form placeholders to reduce duplicate code
+
+%form__styling{
+    position: relative;
+    backdrop-filter: blur(10px);
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 4rem;
+    border-radius: 15px;
+    @include displayPosition($direction: column, $j-content: center, $align-i: center);
+    ion-icon{
+        margin: 2rem;
+        @include IconStyling($size: 56px, $color: $LightBlue);
+    }
+}
+
+%input__styling{
+    margin: 0rem 0rem 1.5rem 0rem;
+    border: none;
+    width: 27rem;
+    height: 4rem;
+    border-radius: 15px;
+    background-color: whitesmoke;
+}
+
+%form__btn{
+    height: 3.5rem;
+    @include Btn__With--border();
+    ion-icon{
+        margin: 0rem 0.2rem;
+    }
+}

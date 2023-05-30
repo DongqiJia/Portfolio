@@ -1,0 +1,105 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+@import '../components/buttons';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// * Styling for the navigation bar
+
+header{
+    @include displayPosition($j-content: center);
+    width:100%;
+    nav{
+        @include displayPosition($direction: column);
+        width: 80%;
+        div.top__navbar{
+            @include displayPosition($direction: row, $j-content: space-between, $align-i: flex-end);
+            padding: 1rem 0rem 0rem 0rem;
+            ul.navbar__logo{
+                li{
+                    padding: 0rem 1rem;
+                    list-style-type: none;
+                    img{
+                        height: 5rem;
+                    }
+                }
+            }
+            ul.navbar__contact--links{
+                @include displayPosition($direction: row, $align-i: flex-end);
+                padding: 1rem 0rem;
+                li{
+                    @include displayPosition($align-i: center); 
+                    padding: 0rem 1rem;
+                    list-style-type: none;
+                    ion-icon{
+                        padding:0rem 0.5rem;
+                        @include IconStyling($size:20px, $color: $LightGrey); 
+                    }
+                    a{
+                        @include TextStyling($family: $open-sans, $size: 16px, $weight: 400, $color: $LightGrey);
+                    }
+                }
+            }
+            ul.navbar__media--links{
+                @include displayPosition($direction: row, $align-i: flex-end);
+                padding: 1rem 0rem;
+                li{
+                    list-style-type: none;
+                    a.navbar__media--link{
+                        padding: 0rem 0.7rem;
+                        text-decoration: none;
+                        ion-icon{
+                            @include IconStyling($size:20px, $color: $LightGrey); 
+                        }
+                    }
+                }
+            }
+        }
+        div.bottom__navbar{
+            @include displayPosition($direction: row, $j-content: space-between);
+            padding: 1rem 0rem;
+            border-top: solid 2px $LightGrey;
+            ul{
+                @include displayPosition($direction: row);
+                li{
+                    cursor: pointer;
+                    padding: 0rem 2rem;
+                    list-style-type: none;
+                    a{
+                        @include TextStyling($family: $open-sans, $size: 16px, $weight: 400, $color: $DarkBlue);
+                        &.active{
+                            @include TextStyling($family: $open-sans, $size: 16px, $weight: 700, $color: $DarkBlue);                            
+                        }
+                    }
+                }
+            }
+            ul{
+                button{
+                    @include Btn__With--border;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(max-width:1090) {
+    div#mobile-menu{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+    div#mobile-menu.is-active span.bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    div#mobile-menu.is-active span.bar:nth-child(2){
+        opacity: 0;
+    }
+    div#mobile-menu.is-active span.bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+}
